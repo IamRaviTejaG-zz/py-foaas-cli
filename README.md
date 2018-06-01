@@ -7,7 +7,7 @@ Please check out the original implementation (in Go) by **Palash Nigam** ([palas
 ***
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/IamRaviTejaG/py-foaas-cli/master/assets/fuck.gif" />
+  <img src="https://github.com/IamRaviTejaG/py-foaas-cli/blob/master/assets/fuck.gif" />
 </p>
 
 ## Installation
