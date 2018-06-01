@@ -38,4 +38,4 @@ python cli.py fuck
 1. **ModuleNotFoundError**: Running `pip install .` doesn't work as the `fucks` folder doesn't get copied while installing. This has something to do with the `setup.py` file. Any PRs are awaited and appreciated.
 
 ***
-### If you like/love this Python implementation, please do consider giving :star: :star: stars to the this repository and also to th original repository here (https://github.com/palash25/foaas-cli).
+### If you like/love this Python implementation, please do consider giving :star: :star: stars to the this repository and also to the original repository here (https://github.com/palash25/foaas-cli).
