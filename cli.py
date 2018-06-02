@@ -16,17 +16,23 @@ doubles = ["anyway", "bday", "blackadder", "bm", "bus", "caniuse", "chainsaw",
             "pulp", "shakespeare", "shutup", "think", "thinking", "thumbs",
             "xmas", "yoda", "you"]
 triples = ["ballmer", "dosomething", "field"]
+all_fucks = sorted(singles + doubles + triples)
+a = str(', '.join(all_fucks))
 
 @click.command()
 @click.argument("fuck", nargs=-1, required=True)
 def opts(fuck: Tuple) -> None:
     if (len(fuck) == 1):
         print ("Received no further arguments! List of operations:\n")
-        a = sorted(singles + doubles + triples)
-        b = str(', '.join(a))
-        print (b)
+        print (a)
+        exit(0)
     else:
-        f = getattr(Fucks, fuck[1])
+        try:
+            f = getattr(Fucks, fuck[1])
+        except AttributeError:
+            print ("Unexpected fuckery! List of operations:\n")
+            print (a)
+            exit(0)
         num_args = str(len(fuck)-2)
         if (fuck[1] in singles):
             if (len(fuck) != 3):

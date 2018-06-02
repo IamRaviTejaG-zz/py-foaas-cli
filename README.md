@@ -20,22 +20,27 @@ pip install .
 ## Usage
 The usage is a little different from the original Go implementation. There exists only one command `fuck` with all other options.
 
+```
+pyfoaas fuck immensity Ravi
+```
+Would print:
+```
+You can not imagine the immensity of the FUCK I do not give. - Ravi
+```
+
 To view the version info:
 ```bash
-python cli.py fuck version
+pyfoaas fuck version
 ```
 
 To view all the possible operations in JSON format:
 ```bash
-python cli.py fuck operations
+pyfoaas fuck operations
 ```
 To view in simple text instead:
 ```bash
-python cli.py fuck
+pyfoaas fuck
 ```
 
-## Known Issues
-1. **ModuleNotFoundError**: Running `pip install .` doesn't work as the `fucks` folder doesn't get copied while installing. This has something to do with the `setup.py` file. Any PRs are awaited and appreciated.
-
 ***
-### If you like this Python implementation, please do consider giving :star: :star: stars to the this repository and also to the original repository here (https://github.com/palash25/foaas-cli).
+### If you like this Python implementation, please do consider giving :star: :star: stars to this repository and also to the original repository here (https://github.com/palash25/foaas-cli).

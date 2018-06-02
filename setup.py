@@ -28,7 +28,7 @@ setup(name='py-foaas-cli',
       package_dir={'fucks': 'fucks'},
       entry_points={
             'console_scripts': [
-                'py-foaas-cli = cli:opts',
+                'pyfoaas = cli:opts',
             ]
         },
       )
