@@ -24,10 +24,11 @@ setup(name='py-foaas-cli',
       py_modules=['cli'],
       python_requires='>=3',
       install_requires=dependencies,
-      packages=find_packages(''),
+      packages=find_packages(),
       package_dir={'fucks': 'fucks'},
-      entry_points='''
-            [console_scripts]
-            py-foaas-cli=cli:opts
-        '''
+      entry_points={
+            'console_scripts': [
+                'py-foaas-cli = cli:opts',
+            ]
+        },
       )
