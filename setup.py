@@ -21,14 +21,14 @@ setup(name='py-foaas-cli',
       author='Ravi Teja Gannavarapu',
       author_email='grt4004@gmail.com',
       url='https://github.com/IamRaviTejaG/py-foaas-cli',
-      py_modules=['cli'],
+      py_modules=['pyfucks'],
       python_requires='>=3',
       install_requires=dependencies,
       packages=find_packages(),
       package_dir={'fucks': 'fucks'},
       entry_points={
             'console_scripts': [
-                'pyfoaas = cli:opts',
+                'pyfoaas = pyfucks:opts',
             ]
         },
       )

@@ -1,6 +1,7 @@
 import click
 from typing import Tuple
 from fucks.fucks import Fucks
+from sys import stdout
 
 singles = ["asshole", "awesome", "bag", "because", "bucket", "bye", "cool",
             "cup", "diabetes", "everyone", "everything", "family",
@@ -23,35 +24,35 @@ a = str(', '.join(all_fucks))
 @click.argument("fuck", nargs=-1, required=True)
 def opts(fuck: Tuple) -> None:
     if (len(fuck) == 1):
-        print ("Received no further arguments! List of operations:\n")
-        print (a)
+        stdout.write ("\nReceived no further arguments! List of operations:")
+        stdout.write ("\n\n" + a + '\n')
         exit(0)
     else:
         try:
             f = getattr(Fucks, fuck[1])
         except AttributeError:
-            print ("Unexpected fuckery! List of operations:\n")
-            print (a)
+            stdout.write ("\nUnexpected fuckery! List of operations:")
+            stdout.write ("\n\n" + a + '\n')
             exit(0)
         num_args = str(len(fuck)-2)
         if (fuck[1] in singles):
             if (len(fuck) != 3):
-                print ("Expected 1 argument! Received "
-                        + num_args + " argument(s).")
+                stdout.write ("\nExpected 1 argument! Received "
+                        + num_args + " argument(s).\n")
                 exit(0)
             else:
                 f(fuck[2])
         elif (fuck[1] in doubles):
             if (len(fuck) != 4):
-                print ("Expected 2 arguments! Received "
-                        + num_args + " argument(s).")
+                stdout.write ("\nExpected 2 arguments! Received "
+                        + num_args + " argument(s).\n")
                 exit(0)
             else:
                 f(fuck[2], fuck[3])
         elif (fuck[1] in triples):
             if (len(fuck) != 5):
-                print ("Expected 3 arguments! Received "
-                        + num_args + " argument(s).")
+                stdout.write ("\nExpected 3 arguments! Received "
+                        + num_args + " argument(s).\n")
                 exit(0)
             else:
                 f(fuck[2], fuck[3], fuck[4])

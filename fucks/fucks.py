@@ -1,4 +1,5 @@
 import requests
+from sys import stdout
 
 def makerequest(*args) -> None:
     baseUrl = "http://foaas.com/"
@@ -14,7 +15,7 @@ def makerequest(*args) -> None:
     headers = {'Accept': 'text/plain'}
     r = requests.get(url, headers=headers)
     s = str(r.content)[2:len(str(r.content))-1]
-    print (s)
+    stdout.write ('\n' + s + '\n')
 
 class Fucks:
     def version() -> None:
